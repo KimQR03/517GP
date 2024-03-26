@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int A, B, C;
+    string mul;
+    int result[100] = {0};
+    
+    cin >> A >> B >> C;
+    
+    mul = to_string (A * B * C);
+
+    for (char c : mul)
+    {
+        if (c >= '0' && c <= '9')
+        {
+            int num = c - '0';
+            result[num]++;
+        }
+    }
+    
+    for (int i = 0; i < 10; i++)
+        cout << result[i] << endl;
+}
