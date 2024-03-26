@@ -1,0 +1,27 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main()
+{
+    int a = 0;
+    int plus = 0;
+    int max = 0;
+    int max_index = 0;
+    map <int, int> map;
+    
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> a;
+        plus += a;
+        map[a]++;
+        
+        if (map[a] > max)
+        {    
+            max = map[a];
+            max_index = a;
+        }
+    }
+    
+    cout << plus / 10 << endl << max_index << endl;
+}
