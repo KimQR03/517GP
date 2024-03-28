@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+    
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    int count = 0;
+    int num[1000] = {0};
+    int sum = 0;
+        
+    for (int i = 1; count < 1000; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            num[count++] = i;
+            
+            if (count == 1000)
+                break;
+        }        
+        
+    }
+
+    for (int x = a-1; x < b; x++)
+    {
+        sum += num[x];
+    }
+        
+    cout << sum << endl;
+}
