@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int val[42] = {0};
+    int num = 0;
+
+    for (int i = 0; i < 10; i++)
+    {
+        int a;
+        cin >> a;
+        int remainder = a % 42;
+        if (val[remainder] == 0) {
+            val[remainder] = 1;
+            num++;
+        }
+    }
+
+    cout << num << endl;
+}
