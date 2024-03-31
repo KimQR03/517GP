@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, c;
+    cin >> a;
+    
+    int b[a] = {0};
+    
+    for (int i = 1; i <= a; i++)
+        cin >> b[i];
+    
+    cin >> c;
+    
+    int d = 0;
+    for (int j = 1; j <= a; j++)
+    {
+        if (b[j] == c)
+        {
+            d++;
+        }
+    }
+    
+    cout << d << endl;
+}
