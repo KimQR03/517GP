@@ -26,7 +26,7 @@ int main() {
         // 가장 왼쪽에 주차한 차량과 가장 오른쪽에 주차한 차량의 거리를 구하여 이동 거리의 합에 더함
         int totalDistance = 2 * (parking[N-1] - parking[0]);
 
-        cout << totalDistance << endl; // 최소 이동거리 출력
+        cout << totalDistance << endl; // 최소 이동거리 출력 
     }
 
     return 0;
