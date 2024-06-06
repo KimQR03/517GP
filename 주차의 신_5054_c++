@@ -1,0 +1,66 @@
+//chat gpt
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; // 테스트 케이스의 수 입력
+
+    while (T--) {
+        int N;
+        cin >> N; // 주차 공간의 수 입력
+
+        vector<int> parking(N); // 주차 공간의 위치를 저장할 벡터
+
+        // 각 주차 공간의 위치 입력
+        for (int i = 0; i < N; ++i) {
+            cin >> parking[i];
+        }
+
+        // 주차 공간을 오름차순으로 정렬
+        sort(parking.begin(), parking.end());
+
+        // 가장 왼쪽에 주차한 차량과 가장 오른쪽에 주차한 차량의 거리를 구하여 이동 거리의 합에 더함
+        int totalDistance = 2 * (parking[N-1] - parking[0]);
+
+        cout << totalDistance << endl; // 최소 이동거리 출력
+    }
+
+    return 0;
+}
+
+//my
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n ,t, num;
+    cin >> t;
+    int result[100];
+    
+    for (int i = 0; i < t; i++)
+    {
+        cin >> n;
+        int max = -1, min = 101;
+        
+        for (int j = 0; j < n; j++)
+        {
+            cin >> num;
+            
+            if (num < min)
+                min = num;
+            
+            else if (num > max)
+                max = num;
+        }
+        
+        result[i] = (max - min) * 2;
+    }
+    
+    for (int i = 0; i < t; i++)
+        cout << result[i] << endl;
+}
